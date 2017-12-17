@@ -7,7 +7,7 @@ As backend service CouchDb was chosen. To install CouchDb please follow the inst
 #### Backend initialization
 
 - To initialize the database and populate it with the data given, please execute the `init.sh` script in `/server`
-- If you are not working on the same machine, plesae adjust the `SERVER_URL` variable in the script
+- If you are not working on the same machine, please adjust the `SERVER_URL` variable in the script
 - If you are getting an `Error: undefined` while executing the script (step `creating questions 'by category' view`) please make your you have the `nspr` package installed (`brew install nspr`)
 
 ## Android App
@@ -20,7 +20,7 @@ As backend service CouchDb was chosen. To install CouchDb please follow the inst
 
 No special requirements are needed to build the app. The gradle scripts should take care of all dependencies. So feel free to use it in [AndroidStudio](https://developer.android.com/studio/index.html) or use
 
-- `./gradlew build` to build the sources (output is in `android/app/build/outputs/apk`. To install it via command line use `adb install`)
+- `./gradlew build` to build the sources (output is in `android/app/build/outputs/apk/debug`. To install it via command line use `adb install`. Release build does not contain any certificates, so please stick to debug build for now)
 - `./gradlew test` to run the unit tests
 
 ## General notes

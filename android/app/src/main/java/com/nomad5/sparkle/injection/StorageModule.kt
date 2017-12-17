@@ -11,7 +11,7 @@ import javax.inject.Singleton
 /****************************************************************************************************************************
  */
 @Module
-class StorageModule {
+open class StorageModule {
 
     @Provides
     @Singleton
@@ -21,7 +21,7 @@ class StorageModule {
 
     @Provides
     @Singleton
-    fun provideStorage(gson: Gson): StorageInterface {
+    open fun provideStorage(gson: Gson): StorageInterface {
         return CouchDbStorage(gson)
     }
 

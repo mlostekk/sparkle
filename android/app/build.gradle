@@ -50,6 +50,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
+    sourceSets {
+        test {
+            java.srcDirs += "src/testShared"
+        }
+        androidTest {
+            java.srcDirs += "src/testShared"
+        }
+    }
 }
 
 /****************************************************************************************************************************

@@ -5,7 +5,6 @@ import com.nomad5.sparkle.model.Answer
 import com.nomad5.sparkle.model.Category
 import com.nomad5.sparkle.model.Question
 import com.nomad5.sparkle.model.storage.StorageInterface
-import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -106,16 +105,6 @@ class CouchDbStorage(gson: Gson) : StorageInterface {
     /****************************************************************************************************************************
      */
     override fun submitAnswer(answer: Answer, success: () -> Unit, error: (String) -> Unit) {
-        api.putAnswer(answer, answer.id).enqueue(object : Callback<ResponseBody> {
-            override fun onResponse(call: Call<ResponseBody>?, response: Response<ResponseBody>?) {
-                processResponse(response, error, {
-                    success()
-                })
-            }
-
-            override fun onFailure(call: Call<ResponseBody>?, t: Throwable?) {
-                error(t?.localizedMessage ?: defaultError)
-            }
-        })
+        throw NotImplementedError()
     }
 }

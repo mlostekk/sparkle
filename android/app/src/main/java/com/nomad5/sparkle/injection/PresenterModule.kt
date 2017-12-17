@@ -11,11 +11,11 @@ import javax.inject.Singleton
  * Module which provides the presenters
  */
 @Module
-class PresenterModule {
+open class PresenterModule {
 
     @Provides
     @Singleton
-    fun provideQuestionsPresenter(storage: StorageInterface): QuestionsContract.Presenter {
+    open fun provideQuestionsPresenter(storage: StorageInterface): QuestionsContract.Presenter {
         return QuestionsPresenter(storage)
     }
 

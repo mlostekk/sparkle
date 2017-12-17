@@ -70,9 +70,11 @@ class CouchDbStorage(gson: Gson) : StorageInterface {
     }
 
     /****************************************************************************************************************************
+     * We need this special query encoding here as CouchDb needs the double quotes
+     * (\"$category\")
      */
     override fun loadQuestionsByCategory(category: String, success: (List<Question>) -> Unit, error: (String) -> Unit) {
-        api.fetchQuestionsByCategory(category).enqueue(object : Callback<CouchDb.Response<CouchDb.ViewRow<Question>>> {
+        api.fetchQuestionsByCategory("\"$category\"").enqueue(object : Callback<CouchDb.Response<CouchDb.ViewRow<Question>>> {
             override fun onResponse(call: Call<CouchDb.Response<CouchDb.ViewRow<Question>>>?, response: Response<CouchDb.Response<CouchDb.ViewRow<Question>>>?) {
                 processResponse(response, error, { body ->
                     success(body.rows.map { it.value })

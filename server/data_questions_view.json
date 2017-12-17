@@ -1,0 +1,7 @@
+{
+    "views": {
+        "by_category": {
+            "map": "function(doc){ emit(doc.category, doc) }"
+        }
+    }
+}

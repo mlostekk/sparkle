@@ -1,0 +1,355 @@
+{
+    "docs": [
+        {
+            "category": "hard_fact",
+            "question": "What is your gender?",
+            "question_type": {
+                "options": [
+                    "male",
+                    "female",
+                    "other"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "hard_fact",
+            "question": "How important is the gender of your partner?",
+            "question_type": {
+                "options": [
+                    "not important",
+                    "important",
+                    "very important"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "hard_fact",
+            "question": "How important is the age of your partner to you?",
+            "question_type": {
+                "condition": {
+                    "if_positive": {
+                        "category": "hard_fact",
+                        "question": "What age should your potential partner be?",
+                        "question_type": {
+                            "range": {
+                                "from": 18,
+                                "to": 140
+                            },
+                            "type": "number_range"
+                        }
+                    },
+                    "predicate": {
+                        "exactEquals": [
+                            "${selection}",
+                            "very important"
+                        ]
+                    }
+                },
+                "options": [
+                    "not important",
+                    "important",
+                    "very important"
+                ],
+                "type": "single_choice_conditional"
+            }
+        },
+        {
+            "category": "hard_fact",
+            "question": "Do any children under the age of 18 live with you?",
+            "question_type": {
+                "options": [
+                    "yes",
+                    "sometimes",
+                    "no"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "lifestyle",
+            "question": "How should your potential partner respond to this question?",
+            "question_type": {
+                "options": [
+                    "yes",
+                    "sometimes",
+                    "no"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "lifestyle",
+            "question": "Could you imagine having children with your potential partner?",
+            "question_type": {
+                "options": [
+                    "yes",
+                    "maybe",
+                    "no"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "lifestyle",
+            "question": "How should your potential partner respond to this question?",
+            "question_type": {
+                "options": [
+                    "yes",
+                    "maybe",
+                    "no"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "hard_fact",
+            "question": "What is your marital status?",
+            "question_type": {
+                "options": [
+                    "never married",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "lifestyle",
+            "question": "How often do your drink alcohol?",
+            "question_type": {
+                "options": [
+                    "never",
+                    "once or twice a year",
+                    "once or twice a month",
+                    "once or twice a week",
+                    "I'm drinking my 3rd mojito now, and it's only 11am"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "lifestyle",
+            "question": "How often do you smoke?",
+            "question_type": {
+                "options": [
+                    "never",
+                    "once or twice a year",
+                    "socially",
+                    "frequently"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "lifestyle",
+            "question": "What is your attitude towards drugs?",
+            "question_type": {
+                "options": [
+                    "I'm completely opposed",
+                    "I've been know to dabble",
+                    "drugs enrich my life"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "lifestyle",
+            "question": "You are looking for...",
+            "question_type": {
+                "options": [
+                    "friendship",
+                    "a hot date",
+                    "an affair",
+                    "a short-term relationship",
+                    "a long-term relationship"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "lifestyle",
+            "question": "Would you like to get married?",
+            "question_type": {
+                "options": [
+                    "yes",
+                    "probably",
+                    "eventually",
+                    "no"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "lifestyle",
+            "question": "What is your ideal living arrangement?",
+            "question_type": {
+                "options": [
+                    "cohabitation",
+                    "separate flat / room in the same building",
+                    "separate flats in the same area",
+                    "weekend-relationship",
+                    "long distance relationship"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "introversion",
+            "question": "Do you enjoy spending time alone?",
+            "question_type": {
+                "options": [
+                    "most of the time",
+                    "often",
+                    "sometimes",
+                    "rarely",
+                    "not at all"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "introversion",
+            "question": "When you're alone, do you get lonely quickly?",
+            "question_type": {
+                "options": [
+                    "most of the time",
+                    "often",
+                    "sometimes",
+                    "rarely",
+                    "not at all"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "introversion",
+            "question": "Do you enjoy going on holiday by yourself?",
+            "question_type": {
+                "options": [
+                    "most of the time",
+                    "often",
+                    "sometimes",
+                    "rarely",
+                    "not at all"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "introversion",
+            "question": "I consciously take \"me time\"",
+            "question_type": {
+                "options": [
+                    "most of the time",
+                    "often",
+                    "sometimes",
+                    "rarely",
+                    "not at all"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "introversion",
+            "question": "Should one keep little secrets from one's partner?",
+            "question_type": {
+                "options": [
+                    "most of the time",
+                    "often",
+                    "sometimes",
+                    "rarely",
+                    "not at all"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "passion",
+            "question": "How often do you think about sex?",
+            "question_type": {
+                "options": [
+                    "a few times a day",
+                    "daily",
+                    "a few times a week",
+                    "a few times a month",
+                    "rarely"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "passion",
+            "question": "If you were alone on a desert island, how long would you last before pleasuring yourself?",
+            "question_type": {
+                "options": [
+                    "less than a day",
+                    "one day",
+                    "one week",
+                    "one month",
+                    "I'd never do something like that"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "passion",
+            "question": "How often would you like to have sex with your prospective partner?",
+            "question_type": {
+                "options": [
+                    "every day",
+                    "a few times a week",
+                    "once a week",
+                    "every two weeks",
+                    "infrequently",
+                    "rarely"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "passion",
+            "question": "Do you like trying out new things in bed and experimenting?",
+            "question_type": {
+                "options": [
+                    "Yes, definitely!",
+                    "Now and then - why not?",
+                    "I'd give it a try",
+                    "I don't know",
+                    "Absolutely not"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "passion",
+            "question": "I can enjoy sex without love",
+            "question_type": {
+                "options": [
+                    "always",
+                    "often",
+                    "sometimes",
+                    "rarely",
+                    "never"
+                ],
+                "type": "single_choice"
+            }
+        },
+        {
+            "category": "passion",
+            "question": "For me, a stable relationship is a prerequisite for really good sex",
+            "question_type": {
+                "options": [
+                    "always",
+                    "often",
+                    "sometimes",
+                    "rarely",
+                    "never"
+                ],
+                "type": "single_choice"
+            }
+        }
+    ]
+}

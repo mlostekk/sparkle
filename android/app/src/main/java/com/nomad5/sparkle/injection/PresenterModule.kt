@@ -1,5 +1,6 @@
 package com.nomad5.sparkle.injection
 
+import com.nomad5.sparkle.model.storage.StorageInterface
 import com.nomad5.sparkle.ui.questions.QuestionsContract
 import com.nomad5.sparkle.ui.questions.QuestionsPresenter
 import dagger.Module
@@ -14,8 +15,8 @@ class PresenterModule {
 
     @Provides
     @Singleton
-    fun provideQuestionsPresenter(): QuestionsContract.Presenter {
-        return QuestionsPresenter()
+    fun provideQuestionsPresenter(storage: StorageInterface): QuestionsContract.Presenter {
+        return QuestionsPresenter(storage)
     }
 
 }
